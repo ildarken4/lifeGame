@@ -227,21 +227,20 @@ canvas.addEventListener('mousemove', function(event) {
 
 // События касания
 let isTouching = false;
-canvas.addEventListener('touchstart', function(e) {
-    e.preventDefault();
+canvas.addEventListener('touchstart', function() {
     painting();
     isTouching = true;
-}, { passive: false });
+});
 
 canvas.addEventListener('touchend', function() {
-    e.preventDefault();
     isTouching = false;
     coloredArray = [];
-}, { passive: false });
+});
 
-canvas.addEventListener('touchmove', function(event) {
-    e.preventDefault();
+canvas.addEventListener('touchmove', function(e) {
+    
     if (isTouching) {
+        e.preventDefault();
         painting();
     }
 }, { passive: false });
