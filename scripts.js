@@ -237,7 +237,6 @@ canvas.addEventListener('touchend', function() {
 });
 
 canvas.addEventListener('touchmove', function() {
-    
     if (isTouching) {
         painting();
     }
