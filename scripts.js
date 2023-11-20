@@ -227,21 +227,25 @@ canvas.addEventListener('mousemove', function(event) {
 
 // События касания
 let isTouching = false;
-canvas.addEventListener('touchstart', function() {
+canvas.addEventListener('touchstart', function(e) {
+    e.preventDefault();
     painting();
     isTouching = true;
-});
+}, { passive: false });
 
 canvas.addEventListener('touchend', function() {
+    e.preventDefault();
     isTouching = false;
     coloredArray = [];
-});
+}, { passive: false });
 
 canvas.addEventListener('touchmove', function(event) {
+    e.preventDefault();
     if (isTouching) {
         painting();
     }
-});
+}, { passive: false });
+
 // Координаты тора
 function getToroidalCoordinates(i, j) {
     return {
