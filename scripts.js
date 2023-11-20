@@ -224,6 +224,24 @@ canvas.addEventListener('mousemove', function(event) {
     }
 });
 
+
+// События касания
+let isTouching = false;
+canvas.addEventListener('touchstart', function() {
+    painting();
+    isTouching = true;
+});
+
+canvas.addEventListener('touchend', function() {
+    isTouching = false;
+    coloredArray = [];
+});
+
+canvas.addEventListener('touchmove', function(event) {
+    if (isTouching) {
+        painting();
+    }
+});
 // Координаты тора
 function getToroidalCoordinates(i, j) {
     return {
