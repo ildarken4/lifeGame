@@ -1,0 +1,87 @@
+body {
+    background-color: #252525;
+}
+
+canvas {
+    border: 1px solid #cecece;
+}
+
+button {
+    margin-right: 4px;
+    padding: 18px 36px;
+    font-size: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    border: none;
+    color: #fefefe;
+    background-color: #252525;
+    position: relative;
+    -webkit-box-shadow: -5px 4px 8px -5px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: -5px 4px 8px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: -5px 4px 8px -5px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+    color: lightgreen;
+    background-color: #222222;
+    -webkit-box-shadow: 0px 0px 1px 1px lightgreen;
+    -moz-box-shadow: 0px 0px 1px 1px lightgreen;
+    box-shadow: 0px 0px 1px 1px lightgreen;
+}
+button:focus {
+    outline: none;
+    border: none;
+    color: lightgreen;
+    background-color: #222222;
+    -webkit-box-shadow: 0px 0px 1px 1px lightgreen;
+    -moz-box-shadow: 0px 0px 1px 1px lightgreen;
+    box-shadow: 0px 0px 1px 1px lightgreen;
+}
+button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid transparent;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: transparent;
+    -webkit-box-shadow: 3px -4px 8px -5px rgba(146, 146, 146, 0.6);
+    -moz-box-shadow: 3px -4px 8px -5px rgba(146, 146, 146, 0.6);
+    box-shadow: 3px -4px 8px -5px rgba(146, 146, 146, 0.6);
+}
+#clear-button {
+    display: none;
+}
+.settings {
+    padding: 20px 0;
+}
+input {
+    color: #fefefe;
+    height: 32px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fefefe;
+}
+input:focus {
+    border: none;
+    border-bottom: 1px solid #fefefe;
+    outline: none;
+}
+.timing {
+    color: #fefefe;
+    margin-left: 8px;
+    opacity: 0;
+    transition: opacity .7s linear;
+}
+.timing.active {
+    opacity: 1;
+    transition: none;
+}

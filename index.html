@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Игра "Жизнь"</title>
+</head>
+<body>
+    <div class="controls">
+        <button>Начать</button>
+        <button id='clear-button'>Очистить</button>
+        <button id="random-button">Случайный порядок</button>
+        <span class="timing"></span>
+    </div>
+    <div class="settings">
+        <input id="width" type="number" placeholder="Кол-во столбцов">
+        <input id="height" type="number" placeholder="Кол-во строк">
+        <button id="apply">Применить</button>
+    </div>
+
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script src="scripts.js"></script>
+    <script src="learn_oop.js"></script>
+</body>
+</html>
