@@ -2,7 +2,9 @@ body {
     background-color: #252525;
     color: #fefefe;
 }
-
+p {
+    font-size: 20px;
+}
 canvas {
     border: 1px solid #cecece;
 }
